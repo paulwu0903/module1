@@ -1,4 +1,4 @@
-module workshop_week1::config;
+module game::config;
 
 
 // === Imports ===

@@ -1,4 +1,4 @@
-module workshop_week1::role;
+module game::role;
 
 // === Imports ===
 use std::{
@@ -8,7 +8,7 @@ use std::{
 use sui::{
     clock::{ Clock },
 };
-use workshop_week1::{
+use game::{
     chest::{ Chest },
     head::{ Head },
     legs::{ Legs },

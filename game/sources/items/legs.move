@@ -1,10 +1,11 @@
-module workshop_week1::shoes;
+module game::legs;
     
 // === Imports ===
-use workshop_week1::{
+use game::{
     gem::{ Gem },
     config::{ Config },
 };
+
 
 // === Constants ===
 const EGemMax: u64 = 0;
@@ -12,16 +13,15 @@ const ENoGem: u64 = 1;
 const EIdxNotValid: u64 = 2;
 
 // === Structs ===
-public struct Shoes has key, store {
+public struct Legs has key, store {
     id: UID, // Sui Object Id
     defense: u64,
     gems: vector<Gem>,
 }
 
-
 // === Public Functions ===
 public fun add_gem(
-    self: &mut Shoes,
+    self: &mut Legs,
     config: &Config,
     new_gem: Gem,
 ){
@@ -30,7 +30,7 @@ public fun add_gem(
 }
 
 public fun remove_equipment_gem_gem(
-    self: &mut Shoes,
+    self: &mut Legs,
     idx: u64,
 ): Gem{
     assert!(self.gems.length() > 0, ENoGem);
@@ -39,7 +39,7 @@ public fun remove_equipment_gem_gem(
 }
 
 public fun switch_gem(
-    self: &mut Shoes,
+    self: &mut Legs,
     idx: u64,
     new_gem: Gem,
 ): Gem{
@@ -51,7 +51,7 @@ public fun switch_gem(
 }
 // === Public View Functions ===
 public fun total_extra(
-    self: &Shoes,
+    self: &Legs,
 ): u64{
     if (self.gems.length() == 0){
         0  
@@ -67,7 +67,7 @@ public fun total_extra(
 }
 
 public fun defense(
-    self: &Shoes,
+    self: &Legs,
 ): u64{
     self.defense
 }
@@ -75,8 +75,8 @@ public fun defense(
 public(package) fun new(
     defense: u64,
     ctx: &mut TxContext,
-): Shoes{
-    Shoes {
+): Legs{
+    Legs {
         id: object::new(ctx),
         defense,
         gems: vector::empty<Gem>(),

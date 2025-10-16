@@ -1,7 +1,7 @@
-module workshop_week1::weapon;
+module game::shoes;
     
 // === Imports ===
-use workshop_week1::{
+use game::{
     gem::{ Gem },
     config::{ Config },
 };
@@ -12,16 +12,16 @@ const ENoGem: u64 = 1;
 const EIdxNotValid: u64 = 2;
 
 // === Structs ===
-public struct Weapon has key, store {
+public struct Shoes has key, store {
     id: UID, // Sui Object Id
-    attack: u64,
+    defense: u64,
     gems: vector<Gem>,
 }
 
 
 // === Public Functions ===
 public fun add_gem(
-    self: &mut Weapon,
+    self: &mut Shoes,
     config: &Config,
     new_gem: Gem,
 ){
@@ -30,7 +30,7 @@ public fun add_gem(
 }
 
 public fun remove_equipment_gem_gem(
-    self: &mut Weapon,
+    self: &mut Shoes,
     idx: u64,
 ): Gem{
     assert!(self.gems.length() > 0, ENoGem);
@@ -39,7 +39,7 @@ public fun remove_equipment_gem_gem(
 }
 
 public fun switch_gem(
-    self: &mut Weapon,
+    self: &mut Shoes,
     idx: u64,
     new_gem: Gem,
 ): Gem{
@@ -51,7 +51,7 @@ public fun switch_gem(
 }
 // === Public View Functions ===
 public fun total_extra(
-    self: &Weapon,
+    self: &Shoes,
 ): u64{
     if (self.gems.length() == 0){
         0  
@@ -66,19 +66,19 @@ public fun total_extra(
     }
 }
 
-public fun attack(
-    self: &Weapon,
+public fun defense(
+    self: &Shoes,
 ): u64{
-    self.attack
+    self.defense
 }
 // === Public(Package) Functions ===
 public(package) fun new(
-    attack: u64,
+    defense: u64,
     ctx: &mut TxContext,
-): Weapon{
-    Weapon {
+): Shoes{
+    Shoes {
         id: object::new(ctx),
-        attack,
+        defense,
         gems: vector::empty<Gem>(),
     }
 }

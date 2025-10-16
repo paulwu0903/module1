@@ -1,7 +1,7 @@
 [package]
-name = "workshop_week1"
+name = "sui_workshop_souvenir"
+published-at = "0x47aec52e2ecb0c856713a53bc24fbb2023fdccd27eee54db88c85d58e2d31975"
 edition = "2024.beta" # edition = "legacy" to use legacy (pre-2024) Move
-published-at = "0x9077606dbbebb2f192d16a10e5ae314713cacf5e25eebf495b78a30c6be1ea78"
 # license = ""           # e.g., "MIT", "GPL", "Apache 2.0"
 # authors = ["..."]      # e.g., ["Joe Smith (joesmith@noemail.com)", "John Snow (johnsnow@noemail.com)"]
 
@@ -19,7 +19,7 @@ published-at = "0x9077606dbbebb2f192d16a10e5ae314713cacf5e25eebf495b78a30c6be1ea
 # Override = { local = "../conflicting/version", override = true }
 
 [addresses]
-workshop_week1 = "0x0"
+sui_workshop_souvenir = "0x0"
 
 # Named addresses will be accessible in Move as `@name`. They're also exported:
 # for example, `std = "0x1"` is exported by the Standard Library.

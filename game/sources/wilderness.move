@@ -1,11 +1,11 @@
-module workshop_week1::wilderness;
+module game::wilderness;
 
 // === Imports ===
 use sui::{
     random:: { Self, Random },
 };
 
-use workshop_week1::{
+use game::{
     chest::{ Self },
     gem::{ Self },
     shoes::{ Self },

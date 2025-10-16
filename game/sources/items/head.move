@@ -1,7 +1,7 @@
-module workshop_week1::head;
+module game::head;
     
 // === Imports ===
-use workshop_week1::{
+use game::{
     gem::{ Gem },
     config::{ Config },
 };

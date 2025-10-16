@@ -1,4 +1,4 @@
-module workshop_week1::gem;
+module game::gem;
 
 // === Structs ===
 public struct Gem has key, store{
