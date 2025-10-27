@@ -1,7 +1,7 @@
 [package]
 name = "game"
+published-at = "0x5122cb2a5ac8b75b2853a40b701b6dd0666062a146f6613fd049057bacb7193a"
 edition = "2024.beta" # edition = "legacy" to use legacy (pre-2024) Move
-published-at = "0x5d086c3588f226b9c140446e59abd9984f103ad43307d9f878199a119fb0da56"
 # license = ""           # e.g., "MIT", "GPL", "Apache 2.0"
 # authors = ["..."]      # e.g., ["Joe Smith (joesmith@noemail.com)", "John Snow (johnsnow@noemail.com)"]
 
@@ -19,7 +19,7 @@ published-at = "0x5d086c3588f226b9c140446e59abd9984f103ad43307d9f878199a119fb0da
 # Override = { local = "../conflicting/version", override = true }
 
 [addresses]
-game = "0x5d086c3588f226b9c140446e59abd9984f103ad43307d9f878199a119fb0da56"
+game = "0x0"
 
 # Named addresses will be accessible in Move as `@name`. They're also exported:
 # for example, `std = "0x1"` is exported by the Standard Library.
